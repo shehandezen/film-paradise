@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/film-paradise/static/css/main.7a1e0052.css",
+    "main.js": "/film-paradise/static/js/main.9809aa83.js",
+    "index.html": "/film-paradise/index.html",
+    "static/media/search.svg": "/film-paradise/static/media/search.af4aa084637c94661d9785ec478b7cbb.svg",
+    "main.7a1e0052.css.map": "/film-paradise/static/css/main.7a1e0052.css.map",
+    "main.9809aa83.js.map": "/film-paradise/static/js/main.9809aa83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a1e0052.css",
+    "static/js/main.9809aa83.js"
+  ]
+}
