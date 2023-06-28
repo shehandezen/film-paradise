@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #262626;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffd311;
+  margin: 25px auto;
+  text-decoration: none;
+}
+
+.header {
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffd311;
+  margin: 25px auto;
+  text-decoration: none;
+}
+
+.search {
+  width: 250px;
+  height: auto;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.search input {
+  padding: 15px 30px;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  color: #262626;
+  font-size: 16px;
+  font-weight: 500;
+  background: #ffe678;
+}
+
+.search img {
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  width: 850px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-content: center;
+  /* background: #fff; */
+  margin-top: 45px;
+  padding: 15px 25px;
+}
+
+.container .movie {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background-color: #7c7b7b;
+  border-radius: 15px;
+  border: none;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.container .movie .year {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  display: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.container .movie .year p {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+}
+
+.container .movie:hover {
+  transform: scale(1.02);
+}
+
+.container .movie:hover .year {
+  display: block;
+}
+
+.container .movie img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: none;
+  z-index: 1;
+}
+
+.container .movie .description {
+  width: 100%;
+  height: auto;
+  background: #ffd311;
+  position: absolute;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 20px 15px;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+.container .movie:hover .description {
+  background: #fcd731;
+}
+
+.container .movie .description span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(43, 43, 43);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.container .movie .description h3 {
+  color: rgb(32, 32, 32);
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.container.empty {
+  position: relative;
+  width: 75vw;
+  height: 100px;
+  background: #ffea8e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.container-detail {
+  position: relative;
+  width: 850px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  justify-content: center;
+  border-radius: 15px;
+  background: #ffea8e;
+  margin-top: 45px;
+  padding: 15px 25px;
+  margin-bottom: 45px;
+}
+
+.container-detail img {
+  position: relative;
+  width: 100%;
+  padding: 25px;
+  border-radius: 45px;
+}
+
+.container-detail .details {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.container-detail .details h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #262626;
+}
+
+.container-detail .details .detail-body {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container-detail .details .detail-body .detail-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  margin: 15px 0px;
+}
+
+.container-detail .details .detail-body .detail-group .label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #242424;
+  margin-right: 10px;
+}
+
+.container-detail .details .detail-body .detail-group .data {
+  font-size: 16px;
+  font-weight: 500;
+  color: #616161;
+}
+
+.container-detail .details .detail-body .detail-group .data a {
+  text-decoration: none;
+  color: #00536d;
+}
+
+.container-detail .details .detail-body .detail-group .data a:before {
+  content: " ☛ ";
+}
+
+@media (max-width: 860px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 575px;
+  }
+
+  .container-detail {
+    grid-template-columns: repeat(1, 1fr);
+    width: 450px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 300px;
+  }
+  .container-detail {
+    grid-template-columns: repeat(1, 1fr);
+    width: 300px;
+  }
+}
